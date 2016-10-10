@@ -35,3 +35,9 @@ Aktualisieren eines Projektes:
 2. git add . -A
 3. git commit -am 'Text zur Charakterisierung'
 4. git push origin master
+
+
+Benutzername + Passwort länger speichern:
+
+1. git config --global credential.helper Cache
+2. config credential.helper "Cache --timeout=3600000"

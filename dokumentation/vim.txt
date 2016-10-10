@@ -1,0 +1,46 @@
+ZUSAMMENFASSUNG VON LEKTION 1
+
+
+  1. Der Cursor wird mit den Pfeiltasten oder den Tasten hjkl bewegt.
+         h (links)     j (unten)     k (aufwärts)    l (rechts)
+
+  2. Um Vim aus der Eingabeaufforderung zu starten, tippe: vim DATEI <ENTER>
+
+  3. Um Vim zu verlassen und alle Änderungen zu verwerfen, tippe:
+                <ESC>  :q!  <ENTER> .
+
+  4. Um das Zeichen unter dem Cursor zu löschen, tippe:  x
+
+  5. Um Text einzufügen oder anzufügen, tippe:
+         i   Einzufügenden Text eingeben   <ESC>    Einfügen vor dem Cursor
+         A   Anzufügenden Text eingeben    <ESC>    Anfügen nach dem Zeilenende
+
+Anmerkung: Drücken von <ESC> bringt Dich in den Normalmodus oder bricht ein
+     ungewolltes, erst teilweise eingegebenes Kommando ab.
+
+-------------------------------------------------------------------------------------
+
+ZUSAMMENFASSUNG VON LEKTION 2
+
+
+  1. Um vom Cursor bis zum nächsten Wort zu löschen, tippe:    dw
+  2. Um vom Cursor bis zum Ende einer Zeile zu löschen, tippe:     d$
+  3. Um eine ganze Zeile zu löschen, tippe:    dd
+
+  4. Um eine Bewegung zu wiederholen, stelle eine Nummer voran:   2w
+  5. Das Format für ein Änderungskommando ist:
+               Operator   [Anzahl]   Bewegungsschritt
+     wobei:
+       Operator - gibt an, was getan werden soll, zum Beispiel  d  für delete
+       [Anzahl] - ein optionaler Zähler, um den Bewegungsschritt zu wiederholen
+       Bewegungsschritt - Bewegung über den zu ändernden Text, wie
+                  w (Wort), $ (zum Ende der Zeile), etc.
+
+  6. Um Dich zum Anfang der Zeile zu begeben, benutze die Null:  0
+
+  7. Um vorherige Aktionen rückgängig zu machen, tippe:         u (kleines u)
+     Um alle Änderungen auf einer Zeile rückgängig zu machen:   U (großes U)
+     Um die Rückgängigmachungen rückgängig zu machen, tippe:    CTRL-R
+
+     --------------------------------------------------------------------------------
+     BIS 3.3 geschafft!
