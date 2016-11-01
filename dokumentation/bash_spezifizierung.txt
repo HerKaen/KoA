@@ -1,0 +1,25 @@
+pwd 		Print working dir
+whoami 		Als wer bin ich angemeldet
+
+Bash-Operatoren:
+	>	  	Das Ergebnis eines Befehls(links von >)wird in eine angegebene Ausgabe geschoben 
+	>>		Dito, aber das Ergebnis wird angehängt
+	| 		Das Ergebnis wird an das nächste Programm zur Weiterverarbeitung überlgeben. Bsp.
+			ls -l /etc | less
+					Die Anzeige der Dateien/Ordner vom Verzeichnis etc wird an das Programm less übergeben, dass eine seitenweise Anzeige von Text beherrscht. 
+
+
+cat > <Dateiname>
+			Eingabe von beliebigem Text
+			[STRG] + d beendet die Eingabe und speichert diese in die Datei <Dateiname>
+
+
+Links
+	Hardlink
+		ln <Dateiname> <Dateiname-lnk>
+			Erzeugt eine neue Referenz auf eine Datei in der File-Tabelle der Festplatte
+
+	Softlink
+		ln -s <Verzeichnisname> <Verzeichnisname-neu>
+			Da Hardlinks nur für Dateien möglich sind gibt es den Softlink für Verzeichnisse
+			Es wird eine neue Datei erstellt, deren Inhalt der Verweis auf das Verzeichnis ist
