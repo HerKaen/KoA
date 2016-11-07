@@ -1,0 +1,14 @@
+https://wiki.ubuntuusers.de
+
+https://help.ubuntu.com/
+
+https://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht/
+
+
+Hilfe auf der Konsole:
+
+	man <Befehl>
+		z.B. "man ls"
+
+
+	ls --help

@@ -1,9 +1,19 @@
 pwd 		Print working dir
 whoami 		Als wer bin ich angemeldet
 
+Standarddeskriptoren:
+
+	In: Tastatur
+	Out: Bildschrim
+	Err: Fehler
+
 Bash-Operatoren:
 	>	  	Das Ergebnis eines Befehls(links von >)wird in eine angegebene Ausgabe geschoben 
 	>>		Dito, aber das Ergebnis wird angehängt
+	ls /etc >> datei_name.dat
+			Der BashInterpreter schaut nach, ob es eine Datei <datei_name.dat> gibt.
+			Falls ja, wird das Ergebnis des Befehls <ls> angehängt.
+			Falls nein, wird eine Datei mit dem Namen <datei_name.dat> erzeugt und die Ausgabe des Befehls <ls> reingeschrieben.
 	| 		Das Ergebnis wird an das nächste Programm zur Weiterverarbeitung überlgeben. Bsp.
 			ls -l /etc | less
 					Die Anzeige der Dateien/Ordner vom Verzeichnis etc wird an das Programm less übergeben, dass eine seitenweise Anzeige von Text beherrscht. 
@@ -17,9 +27,29 @@ cat > <Dateiname>
 Links
 	Hardlink
 		ln <Dateiname> <Dateiname-lnk>
-			Erzeugt eine neue Referenz auf eine Datei in der File-Tabelle der Festplatte
+			Erzeugt eine neue Referenz auf eine Datei in der File-Tabelle der Festplatte.
+			Jede Datei hat mindestens einen Hardlink.
 
 	Softlink
 		ln -s <Verzeichnisname> <Verzeichnisname-neu>
 			Da Hardlinks nur für Dateien möglich sind gibt es den Softlink für Verzeichnisse
-			Es wird eine neue Datei erstellt, deren Inhalt der Verweis auf das Verzeichnis ist
+			Es wird eine neue Datei erstellt, deren Inhalt der Verweis auf das Verzeichnis ist.
+
+
+Variablen:
+	Definition
+		Variablenname aus Buchstaben, keine Zahlen als ersten Buchstaben, keine Sonderzeichen, dann Zuweisungsoperator (=) ohne Leerzeichen, dann Wert
+		var="Zeichenkette"
+
+	Verwendung
+		$ + Variablenname
+			z.B. echo $var
+
+
+
+Kommandosubstitution mit Backticks:
+	var=`ls`
+		speichert die Ausgabe des Befehls "ls" in der Variable
+
+	echo $var
+		gibt das Ergebnis des Befehls aus 
