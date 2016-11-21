@@ -66,3 +66,79 @@ Vorraussetzungen
 
 		echo "$string_1 $string_2 aber im Heu"
 		
+	IF-Anweisung
+		read -p "Bitte geben Sie Vor und Zunamen ein: " var
+
+		echo "Die Eingabe lautete: $var"
+
+		if [[ $var = "q" ]]
+		then
+        	echo "Ist ein Q!"
+		elif [[ $var = "m" ]]
+		then
+        	echo "Jo, ein M!"
+		else
+        	echo "Irgendwas anderes!"
+		fi
+
+
+
+	Schleifen
+		#!/bin/bash
+
+		while [[ $eingabe -ne 1 ]]
+		do
+        	read -p "Mach Eingabe: " eingabe
+        	echo $eingabe
+		done
+
+
+
+	Operatoren
+		[[ $var ]]				true falls in $var etwas steht außer false oder 0
+		[[ wer1 -eq wert2 ]]	true wenn wert1 gleich wert2
+		[[ wert1 -ne wert2 ]]	true wenn wert1 nicht gleich wert2
+		[[ wert1 -gt wert2 ]]	true wenn wert1 größer als wert2
+		[[ wert1 -lt wert2 ]]	true wenn wert1 kleiner als wert2
+
+		[[ -e $dateiname ]]		true wenn Datei vorhanden ist
+		[[ -d $verzeichnis ]]	true wenn Verzeichnis vorhanden ist
+
+
+	
+	Aufgabe:
+		Erstellen Sie ein Skript, das einen Parameter entgegennimmt und checkt ob es eine Datei gibt, die so heißt wie der übergebene Parameter.
+		Aufruf : ./test.sh test.txt
+
+		Erweiterung:
+		Die Eingabeaufforderung soll solange gezeigt werden, bis der Benutzer ein q eingibt, oder einen vorhandenen Dateinamen
+
+#!/bin/bash
+
+if [[ $1 ]]
+then
+
+var=$1
+
+if [[ -e $var ]]
+then
+        echo "Die Eingabe lautete: $var"
+        echo "Datei vorhanden"
+else
+        echo "Die Eingabe lautete: $var"
+        echo "Datei nicht vorhanden"
+fi
+
+else
+
+read -p "Eingabe: " var
+
+        echo "Die Eingabe lautete: $var"
+
+if [[ -e $var ]]
+then
+        echo "Datei vorhanden"
+else
+        echo "Datei nicht vorhanden"
+fi
+fi
