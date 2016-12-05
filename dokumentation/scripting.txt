@@ -142,3 +142,25 @@ else
         echo "Datei nicht vorhanden"
 fi
 fi
+
+-----------------------------------------------------------------------
+
+BOGNER:
+
+Operatoren
+	[[ $var ]] 			true falls in $var etwas steht außer false oder 0
+	[[ !$var ]]			true falls $var ist 0, false, oder leer
+
+	Strings
+	[[ wert1 = 'string' ]]  gibt true wenn wert1 gleich Zeichenkette ist
+	[[ wert1 != 'string' ]] gitt true wenn wert1 ungleich Zeichenkette ist
+
+	arithmetrische Werte
+	[[ wert1 -eq wert2 ]]	gibt true wenn wert1 gleich wert2
+	[[ wert1 -ne wert2 ]]	gibt true wenn wert1 ungleich wert2
+	[[ wert1 -gt wert2 ]]	gibt true wenn wert1 größer wert2
+	[[ wert1 -lt wert2 ]]	gibt true wenn wert1 kleiner wert2
+	
+	Systemoperationen
+	[[ -e $dateiname ]] 	gibt true wenn Datei vorhanden ist
+[[ -d $verzeichnis ]] gibt true wenn Verzeichnis vorhanden
