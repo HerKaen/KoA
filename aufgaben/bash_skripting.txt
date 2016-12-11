@@ -35,4 +35,4 @@ datum=$(date +"%d.%m.%Y - %H:%M:%S")
 
 echo "Datum: " $datum" | Notiz: " $notiz  >> /home/nico/$topic/notes.txt
 
-fics
+fi
