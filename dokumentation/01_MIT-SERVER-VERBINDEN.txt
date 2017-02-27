@@ -1,0 +1,9 @@
+ping 172.16.253.15
+ssh glenznic@172.16.161.151 /// ssh nico@172.16.253.15
+j
+sudo vim /etc/network/interfaces
+dhcp => static
+address 172.16.161.151
+netmask 255.255.0.0
+gateway 172.16.1.253
+dns-nameservers 172.16.1.201
